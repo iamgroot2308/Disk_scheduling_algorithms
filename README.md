@@ -1,12 +1,12 @@
-# 💽 Disk Scheduling Simulation in C
+# Predictive Disk Scheduling Simulation in C
 
 ## 📌 Overview
-
-This project implements and compares multiple **disk scheduling algorithms** using a simulation written in C. It evaluates their performance based on **total seek operations** and demonstrates how different strategies impact disk head movement.
+This project is done by Sourav Kundu and Anubhab Neogi.
+We implemented and compared multiple **disk scheduling algorithms**. As part of the project we evaluate their performance based on **total seek operations** and show how different algorithms impact disk head movement.
 
 ---
 
-## ⚙️ Algorithms Implemented
+## Algorithms Implemented
 
 * **FCFS (First Come First Serve)**
   Processes requests in the order they arrive.
@@ -29,7 +29,7 @@ This project implements and compares multiple **disk scheduling algorithms** usi
 
 ---
 
-## 🧠 Predictive Algorithm Insight
+## Predictive Algorithm Insight
 
 The predictive algorithm attempts to improve performance by:
 
@@ -122,41 +122,3 @@ gcc predictive_disk_scheduling.c -o  predictive_disk_scheduling
 predictive_disk_scheduling.c   # Main simulation code
 README.md           # Project documentation
 ```
-
----
-
-## 🚀 Features
-
-* Modular implementation of scheduling algorithms
-* Custom predictive heuristic
-* Random workload generation
-* Performance comparison across algorithms
-
----
-
-## ⚠️ Limitations
-
-* Predictive algorithm does not include **arrival time modeling**
-* All requests are assumed to be available initially
-
----
-
-## 🔮 Future Improvements
-
-* We can add **arrival time** for the requests
-* Implement **CSCAN and CLOOK**
-* Improve predictive model using trend analysis
-
----
-
-## 👨‍💻 Author
-
-Sourav Kundu
-
-Anubhab Neogi
-
----
-
-## 📜 License
-
-This project is for educational purposes.
