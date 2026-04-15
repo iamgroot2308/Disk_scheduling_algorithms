@@ -119,6 +119,6 @@ gcc predictive_disk_scheduling.c -o  predictive_disk_scheduling
 ## 📁 Project Structure
 
 ```
-predictive_disk_scheduling.c   # Main simulation code
-README.md           # Project documentation
+predictive_disk_scheduling.c   # Main code
+README.md           # User manual
 ```
