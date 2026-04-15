@@ -15,12 +15,12 @@ This project implements and compares multiple **disk scheduling algorithms** usi
   Selects the request closest to the current head position.
 
 * **SCAN (Elevator Algorithm)**
-  Moves the head in one direction, servicing requests, then reverses.
+  Moves the head in one direction, servicing requests, then reverses after hitting end of the disk in that direction.
 
 * **LOOK**
   Similar to SCAN but only goes as far as the last request in each direction.
 
-* **Predictive Scheduling (Custom Algorithm)** ⭐
+* **Predictive Scheduling  ⭐**
   A heuristic-based approach that:
 
   * Uses recent request history
@@ -33,7 +33,7 @@ This project implements and compares multiple **disk scheduling algorithms** usi
 
 The predictive algorithm attempts to improve performance by:
 
-* Tracking **recently served requests**
+* Tracking **recently arrived requests**
 * Estimating **direction of movement**
 * Using a **moving average** for prediction
 * Applying penalties for direction mismatch
@@ -75,18 +75,27 @@ The program displays:
 * Total number of requests
 * Initial head position
 * Request queue
+* Served order for predictive algorithm
 * **Total seek operations** for each algorithm
 
 Example:
 
 ```
-Algorithm        Total Seek Operations
+=== Disk Scheduling Simulation ===
+Total Requests: 9
+Initial Head Position: 67
+Request Queue:
+[ 20 22 24 26 28 56 38 198 53 ]
+PREDICTIVE Order: 67 -> 56 -> 20 -> 22 -> 24 -> 26 -> 28 -> 38 -> 53 -> 198 
+--- Performance Results ---
+Algorithm       Total Seek Operations
 ----------------------------------
-FCFS             640
-SSTF             236
-SCAN             300
-LOOK             280
-PREDICTIVE       210
+FCFS            406
+SSTF            225
+SCAN            311
+LOOK            309
+PREDICTIVE      225
+----------------------------------
 ```
 
 ---
@@ -96,13 +105,13 @@ PREDICTIVE       210
 ### Compile:
 
 ```bash
-gcc disk_scheduling.c -o disk
+gcc predictive_disk_scheduling.c -o  predictive_disk_scheduling  
 ```
 
 ### Run:
 
 ```bash
-./disk
+./predictive_disk_scheduling  
 ```
 
 ---
@@ -110,7 +119,7 @@ gcc disk_scheduling.c -o disk
 ## 📁 Project Structure
 
 ```
-disk_scheduling.c   # Main simulation code
+predictive_disk_scheduling.c   # Main simulation code
 README.md           # Project documentation
 ```
 
@@ -129,22 +138,22 @@ README.md           # Project documentation
 
 * Predictive algorithm does not include **arrival time modeling**
 * All requests are assumed to be available initially
-* No graphical visualization
 
 ---
 
 ## 🔮 Future Improvements
 
-* Add **arrival time-based scheduling**
+* We can add **arrival time** for the requests
 * Implement **CSCAN and CLOOK**
-* Visualize disk head movement
 * Improve predictive model using trend analysis
 
 ---
 
 ## 👨‍💻 Author
 
-Your Name
+Sourav Kundu
+
+Anubhab Neogi
 
 ---
 
